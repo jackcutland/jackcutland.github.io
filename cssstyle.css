@@ -1,0 +1,590 @@
+/*css style sheet*/
+
+/*Global settings*/
+
+html{
+  font-size: 100%;
+}
+
+body{
+  font-weight: bold;
+  line-height: 1.75;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-weight:400;
+  line-height:1.3;
+  text-transform: capitalize;
+}
+
+/* ======
+=====
+====Global settings to fit images=====
+====== */
+img {
+  width: 100%;
+  display:block;
+  object-fit: cover;
+}
+.navigationbar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav-postition{
+	width: 90vw;
+	max-width: 1120px;	
+}
+.nav-heading{
+	height: 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+.nav-heading img {
+	width: 200px;
+}
+
+
+.main-links{
+	display: flex;
+	flex-direction: column;
+	height: 0;
+	overflow: hidden;
+	
+}
+
+.main-link {
+	display: block;
+	text-align: center;
+	text-transform: capitalize;
+	color: black;
+	letter-spacing: 1px;
+	padding: 1rem 0;
+	border-top: 1px;
+	transition: 0.2s ease-in-out all;
+}
+
+.main-link:hover {
+	color: red;
+}
+
+.h-logo {
+	display: flex;
+	align-items:center;
+}
+.show-links{
+	height: 299px;
+}
+
+@media screen and (min-width: 992px) {
+  
+
+  }
+  .navigationbar{
+    height: 6rem;
+  }
+  .nav-postition{
+    display: flex;
+    align-items: center;
+  }
+  .nav-heading{
+    padding: 0;
+    height: auto;
+    margin-right: 2rem; 
+  }
+
+
+.main-links {
+  height: auto !important;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  
+}
+.main-link{
+  padding: 0;
+  border-top: none;
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-family: cursive;
+}
+
+
+/* ======
+======
+main content page 
+=====*/
+.main-content {
+  width: 90vw;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  min-height: cal(100vh - (6rem + 4rem));
+
+}
+
+
+
+
+/* =====
+=======
+footer====
+====== */
+
+.main-content-footer{
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content-footer p {
+  margin: 0;
+}
+
+/*======
+========
+banner====
+======*/
+.banner {
+  height: 40vh;
+  background: url('bannerimg.jpg') center/cover no-repeat;
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.banner-mount{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-text{
+  text-align: center;
+  color:rgb(234, 232, 231);
+  font-family: cursive;
+}
+
+@media  screen and (min-width: 768px) {
+  .banner-text h1{
+    font-size: 4rem;
+    margin-bottom: 0; 
+  }
+  
+}
+
+/*recipes=====
+========
+========*/
+.recipes-content{
+  display: grid;
+  gap: 2rem 1rem;
+  
+
+}
+
+
+
+.recipes-list{
+
+  display: grid;
+  gap: 2rem 1rem;
+  padding-bottom: 3rem;
+  
+}
+
+
+
+.featured h4{
+  font-family: cursive;
+  text-emphasis: bold;
+}
+.featured-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.featured-list a {
+  text-transform: capitalize;
+  display: block;
+  color:black;
+  font-family: cursive;
+  transition: 0.4s ease-in-out all;
+}
+
+.featured-list a:hover{
+  color: blue;
+}
+
+/* food pages ====
+====== */
+
+.recipe {
+  display: block;
+}
+
+.recipe h1{
+  font-family: cursive;
+}
+
+.recipe-img {
+  height: 15rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.recipe h5 {
+  line-height: 1;
+  color:black;
+  margin-bottom: 1;
+  font-family: cursive;
+  font-weight: 400;
+}
+
+.recipe p {
+  line-height: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  color:black;
+  letter-spacing: 1px;
+  font-family: cursive;
+}
+
+@media screen and (min-width: 576px){
+  .recipes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  }
+
+
+  
+@media screen and (min-width: 992px){
+  .recipes-content {
+    grid-template-columns:  200px 1fr;
+  }
+  .featured{
+    order: 0;
+  }
+  .featured-list{
+    grid-template-columns: 1fr ;
+  }
+
+  .recipe p{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .recipe h5{
+    font-size: 1.15rem;
+
+  }
+  .recipes-list{
+    grid-template-columns: 1fr 1fr 1fr;
+  }  
+}
+
+/* ==============
+recipie pages page  
+========
+================
+*/
+.recipe-hero{
+  display:grid;
+  gap: 3rem;
+  
+}
+
+.recipe-hero-img{
+  height: 300px;
+  border-radius: 0.25rem;
+  width: 100%;
+
+}
+.recpie-info p {
+  color:black;
+  font-family: cursive;  
+}
+
+.recipe-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.recipe-icons h5,
+.recipe-icons p{
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  color: black;
+  font-family: cursive;
+}
+
+.recipe-ingrediants{
+ 
+  text-align: center;
+  
+}
+.recipe-ingrediants h1{
+  font-family: cursive;
+  font-size: 3rem;
+}
+
+.recipe-ingrediants h2{
+  font-family: cursive;
+  text-align: center;
+  font-size: 2rem;
+}
+.recipe-ingrediants h3{
+  font-family: cursive;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+.recipe-ingrediants h4{
+  font-family: cursive;
+  padding-top: 1rem;
+  font-size: 5rem;
+  color: red;
+}
+
+.recipe-ingrediants li{
+  font-family: cursive;
+  text-align: center;
+
+}
+.recipe-ingrediants p{
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: black;
+  font-family: cursive;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 1rem;
+
+
+}
+
+
+
+@media screen and (min-width: 992px) {
+  .recipe-hero{
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
+  }
+  
+}
+
+/*=============
+===============
+STAR RATING 
+==============
+==============
+*/
+
+.stars{
+  display: flex;
+
+}
+
+.stars.disabled {
+  pointer-events: none;
+}
+
+.stars a{
+  opacity: 50%;
+  cursor: pointer;
+  padding: 3px;
+  
+}
+
+.stars:hover a{
+  opacity: 100%;
+}
+
+.stars a:hover{
+  opacity: 100%;
+}
+
+.stars a:hover ~ a{
+  opacity: 50%;
+}
+
+.stars a.active {
+  opacity: 100%;
+}
+
+
+/*====== Eat out page
+======
+=======
+ */
+ .eatout-page h2{
+  text-transform: none;
+  font-weight:bold;
+}
+
+.eatout-page{
+  display: grid;
+  gap: 2rem 4rem;
+  padding-bottom: 3rem;
+}
+
+
+
+@media screen and (min-width: 992) {
+  .main-content{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+  
+
+  
+}
+ 
+.eatout-page h2{
+  font-family: cursive;
+  
+}
+
+.eatout-page p{
+  font-family: cursive;
+  
+}
+.featured-title{
+  text-align: center;
+  font-family: cursive;
+  font-size: 1.15rem;
+  color:black;
+}
+
+
+
+
+/* ABOUT PAGE */
+.about-page h2{
+  text-transform: none;
+  font-weight:bold;
+}
+
+.about-page{
+  display: grid;
+  gap: 2rem 4rem;
+  padding-bottom: 3rem;
+}
+
+.about-img {
+  border-radius: 0.25rem;
+  height: 300px;
+}
+
+@media screen and (min-width: 992) {
+  .about-page{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+  .about-img {
+    height: 100%;  
+  }
+
+  
+}
+ 
+.about-page h2{
+  font-family: cursive;
+  
+}
+
+.about-page p{
+  font-family: cursive;
+  
+}
+.featured-title{
+  text-align: center;
+  font-family: cursive;
+  font-size: 1.15rem;
+  color:black;
+}
+
+/*comment box=======
+====*/
+
+.comments{
+  top: 50%;
+  position: relative;
+  width: 500px;
+
+}
+
+.comments h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+
+}
+
+.comments input{
+  width:100%;
+  height: 50px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+
+}
+.comments button{
+  border: 0;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  
+
+}
+
+.comments button:hover{
+  background-color: rgb(197, 197, 225);
+}
+.comments textarea{
+  width: 100%;
+  height: 150px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+
+
+/*=====404 Error Page
+=======*/
+.error-404 {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.error-404 h1{
+  font-size: 12rem;
+}
+
